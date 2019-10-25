@@ -1,0 +1,2 @@
+# Notepower
+Nothing
