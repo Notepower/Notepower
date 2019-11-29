@@ -47,6 +47,27 @@ void HienThid(int a[][MAXC],int n,int d)
 		printf("%d\t",a[d][j]);
 	}
 }
+int Dem1(int a[][MAXC],int n)
+{
+	int dem=0;
+	for (int i=0;i<n;i++)
+		{
+			for (int j=0;j<n;j++)
+			if (i>j && a[i][j]<0)
+			dem++;
+}
+return dem;
+}
+int min(int a[][MAXC],int n)
+{
+	int min=a[0][0];
+		for (int i=0;i<n;i++)
+		{
+			for (int j=0;j<n;j++)
+			if (min>a[i][j])
+			min=a[i][j];
+		}
+		return min;
 int main()
 {
  int a[MAXD][MAXC];
@@ -55,6 +76,8 @@ int main()
  XuatMaTran (a,n);
  printf("Tong cac phan tu tren duong cheo chinh la %d",TongDCC(a,n));
  HienThid(a,n,d);
+ printf("\nSo phan tu am phia duoi duong cheo trinh la %d",Dem1(a,n));
+ printf("\nPhan tu nho nhat trong ma tran la %d",min(a,n));
 //return 0;
 
 }
