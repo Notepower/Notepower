@@ -1,6 +1,13 @@
+Example: 0 1 2 3 4
+	 A B C B A
+n=strlen (s)=5
+i=0	S(0)=S(4)
+	S(1)=S(3)
+	S(2)=S(2)
+
 #include <stdio.h>
 #include <string.h>
-int DX(char s[])
+int DX(char s[])                                                    
 {
 	int n = strlen (s);
 	for (int i=0;i<n/2;i++)
