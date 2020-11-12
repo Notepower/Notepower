@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Daylamotproject2
 {
@@ -6,11 +6,13 @@ namespace Daylamotproject2
     {
         static void Main(string[] args)
         {
-            /*HoaDon hd = new HoaDon();
+            HoaDon hd = new HoaDon();
             hd.Nhap();
             hd.Xuat();
-            */
-             BAI3 gio = new BAI3();
+            Console.WriteLine("so tin chi thuc hanh la {0}", hd.Tinh_TH());
+            
+            /*
+            BAI3 gio = new BAI3();
              gio.Nhap();
              gio.Show24();
              gio.Show12();
@@ -23,7 +25,7 @@ namespace Daylamotproject2
             t2.Congphut();
 
             Console.WriteLine("Cong phut {0}", t1+t2);
-
+            */
             /*
            DAYLAMOTPROJECT22.Last ps1 = new DAYLAMOTPROJECT22.Last();
             DAYLAMOTPROJECT22.Last ps2 = new DAYLAMOTPROJECT22.Last();
