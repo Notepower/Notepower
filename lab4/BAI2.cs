@@ -4,7 +4,7 @@ using System.Text;
 
 namespace daylamotproject
 {
-   class Colour
+    class Colour
     {
         protected int colour;
         public Colour()
@@ -46,7 +46,7 @@ namespace daylamotproject
             Console.ForegroundColor = (ConsoleColor)colour;
             Console.CursorTop = y;
             Console.CursorLeft = x;
-            Console.Write("o");
+            Console.Write("GAY");
         }
     }
 }
