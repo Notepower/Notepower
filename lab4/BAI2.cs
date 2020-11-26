@@ -4,7 +4,7 @@ using System.Text;
 
 namespace daylamotproject
 {
-    class Colour
+   class Colour
     {
         protected int colour;
         public Colour()
@@ -29,9 +29,9 @@ namespace daylamotproject
         }
         public void Set()
         {
-            Console.Write("Nhập màu của pixel: ");
+            Console.Write("Nhap mau cua Pixel: ");
             colour = int.Parse(Console.ReadLine());
-            Console.WriteLine("Nhập tọa độ của pixel: ");
+            Console.WriteLine("Nhap toa do cua pixel: ");
             Console.Write("x = ");
             x = Convert.ToInt32(Console.ReadLine());
             Console.Write("y = ");
