@@ -20,7 +20,9 @@ namespace WindowsFormsApplication1
             InitializeComponent();
             txtc.Enabled = false;
             txtkq.Enabled = false;
-
+            MaximizeBox = false;
+            timer1.Start();
+            lbTime.Text = DateTime.Now.ToLongTimeString();
         }
         public void PTB1()
         {
@@ -138,45 +140,53 @@ namespace WindowsFormsApplication1
 
         private void txta_Leave(object sender, EventArgs e)
         {
-            short a;
-            bool Check = Int16.TryParse(txta.Text, out a);
-            if (Check == false)
-
-                if (MessageBox.Show("Loi Dinh Dang\nBan co nhap lai khong ", "Thong Bao", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
-                {
-                    txta.Clear();
-
-                    txta.Focus();
-                }
+           
         }
 
         private void txtb_Leave(object sender, EventArgs e)
         {
-            short b;
-            bool Check = Int16.TryParse(txtb.Text, out b);
-            if (Check == false)
-
-                if (MessageBox.Show("Loi Dinh Dang\nBan co nhap lai khong ", "Thong Bao", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
-                {
-                    txtb.Clear();
-
-                    txtb.Focus();
-                }
+          
 
         }
 
         private void txtc_Leave(object sender, EventArgs e)
         {
-            short c;
-            bool Check = Int16.TryParse(txtc.Text, out c);
-            if (Check == false)
+            
+        }
 
-                if (MessageBox.Show("Loi Dinh Dang\nBan co nhap lai khong ", "Thong Bao", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
-                {
-                    txtc.Clear();
+        private void txta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled=true;
+            }
+        }
 
-                    txtc.Focus();
-                }
+        private void txtb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void lbTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbTime.Text = DateTime.Now.ToLongTimeString();
+            timer1.Start();
         }
     }
 }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,6 +44,8 @@
             this.rdbpt2 = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
+            this.lbTime = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,6 +111,7 @@
             this.txta.Name = "txta";
             this.txta.Size = new System.Drawing.Size(100, 20);
             this.txta.TabIndex = 6;
+            this.txta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txta_KeyPress);
             this.txta.Leave += new System.EventHandler(this.txta_Leave);
             // 
             // txtb
@@ -117,6 +120,7 @@
             this.txtb.Name = "txtb";
             this.txtb.Size = new System.Drawing.Size(100, 20);
             this.txtb.TabIndex = 7;
+            this.txtb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtb_KeyPress);
             this.txtb.Leave += new System.EventHandler(this.txtb_Leave);
             // 
             // txtc
@@ -125,6 +129,7 @@
             this.txtc.Name = "txtc";
             this.txtc.Size = new System.Drawing.Size(100, 20);
             this.txtc.TabIndex = 8;
+            this.txtc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtc_KeyPress);
             this.txtc.Leave += new System.EventHandler(this.txtc_Leave);
             // 
             // txtkq
@@ -203,12 +208,31 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // lbTime
+            // 
+            this.lbTime.AutoSize = true;
+            this.lbTime.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTime.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbTime.Location = new System.Drawing.Point(-2, 1);
+            this.lbTime.Name = "lbTime";
+            this.lbTime.Size = new System.Drawing.Size(57, 20);
+            this.lbTime.TabIndex = 14;
+            this.lbTime.Text = "label2";
+            this.lbTime.Click += new System.EventHandler(this.lbTime_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(469, 291);
+            this.Controls.Add(this.lbTime);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClose);
@@ -234,7 +258,6 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -249,5 +272,7 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label lbTime;
+        private System.Windows.Forms.Timer timer1;
     }
 }
